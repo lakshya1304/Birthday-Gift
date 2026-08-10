@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Tom 😽❤️ // Ultimate Universe of Harshit</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600;800&family=Sacramento&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Canvas Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <style>
+        /* =========================================
+           CRAZY ROMANTIC CYBER-MAGIC STYLESHEET
+           ========================================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-glow: #ff2a6d;
+            --secondary-glow: #05d9e8;
+            --neon-pink: #ff6584;
+            --dark-bg: #070514;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--dark-bg);
+            color: #fff;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Fullscreen Interactive Canvas for Magic Particles & Fireflies */
+        #magicCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Floating Audio Control Deck */
+        .control-deck {
+            position: fixed;
+            top: 25px;
+            right: 25px;
+            display: flex;
+            gap: 12px;
+            z-index: 1000;
+        }
+
+        .cyber-btn {
+            background: rgba(255, 42, 109, 0.15);
+            border: 1px solid var(--primary-glow);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            color: var(--neon-pink);
+            font-size: 20px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 0 20px rgba(255, 42, 109, 0.4);
+        }
+
+        .cyber-btn:hover {
+            transform: scale(1.15) rotate(15deg);
+            background: var(--primary-glow);
+            color: #fff;
+            box-shadow: 0 0 35px var(--primary-glow);
+        }
+
+        /* Main Wrapper */
+        .wrapper {
+            position: relative;
+            z-index: 10;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Explosive Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .live-badge {
+            background: linear-gradient(135deg, #ff2a6d, #ff6584);
+            padding: 8px 25px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            box-shadow: 0 0 25px rgba(255, 42, 109, 0.6);
+            animation: badgePulse 2s infinite ease-in-out;
+            margin-bottom: 20px;
+        }
+
+        @keyframes badgePulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 20px rgba(255,42,109,0.5); }
+            50% { transform: scale(1.05); box-shadow: 0 0 35px rgba(255,42,109,0.9); }
+        }
+
+        .hero h1 {
+            font-family: 'Sacramento', cursive;
+            font-size: clamp(4rem, 10vw, 8.5rem);
+            color: #ff8fa3;
+            text-shadow: 0 0 30px rgba(255, 101, 132, 0.8), 0 0 60px rgba(255, 42, 109, 0.4);
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 span {
+            display: inline-block;
+            animation: catBounce 1.8s infinite ease-in-out;
+            filter: drop-shadow(0 0 15px #ff2a6d);
+        }
+
+        @keyframes catBounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0) rotate(0deg); }
+            40% { transform: translateY(-20px) rotate(-10deg); }
+            60% { transform: translateY(-10px) rotate(10deg); }
+        }
+
+        .hero p {
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            color: #b8b8d4;
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin-top: 10px;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #8a8aa3;
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            animation: bounceIndicator 2s infinite;
+        }
+
+        @keyframes bounceIndicator {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(10px); }
+            60% { transform: translateY(5px); }
+        }
+
+        /* Holographic Neon Glass Containers */
+        .holo-card {
+            background: rgba(20, 15, 35, 0.65);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 42, 109, 0.3);
+            border-radius: 30px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), inset 0 0 20px rgba(255, 42, 109, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .holo-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+            transition: 0.7s;
+        }
+
+        .holo-card:hover::before {
+            left: 100%;
+        }
+
+        /* Love Letter Section */
+        .letter-section {
+            padding: 80px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .letter-container {
+            max-width: 850px;
+            width: 100%;
+            padding: 50px;
+        }
+
+        .letter-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 35px;
+            border-bottom: 1px solid rgba(255, 42, 109, 0.2);
+            padding-bottom: 20px;
+        }
+
+        .letter-header i {
+            font-size: 35px;
+            color: var(--primary-glow);
+            animation: pulseHeart 1.2s infinite;
+        }
+
+        @keyframes pulseHeart {
+            0%, 100% { transform: scale(1); filter: drop-shadow(0 0 5px var(--primary-glow)); }
+            50% { transform: scale(1.3); filter: drop-shadow(0 0 20px var(--primary-glow)); }
+        }
+
+        .letter-header h2 {
+            font-family: 'Sacramento', cursive;
+            font-size: 3.5rem;
+            color: #ff8fa3;
+        }
+
+        .letter-body p {
+            font-size: 1.15rem;
+            line-height: 1.9;
+            color: #dfdfe6;
+            margin-bottom: 25px;
+            font-weight: 300;
+        }
+
+        .letter-body .greet {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--neon-pink);
+        }
+
+        .signature {
+            margin-top: 40px;
+            font-style: italic;
+            color: #ff8fa3 !important;
+            font-size: 1.25rem !important;
+        }
+
+        /* 3D Interactive Photo Gallery */
+        .gallery-section {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .section-heading {
+            font-family: 'Sacramento', cursive;
+            font-size: 4rem;
+            color: var(--neon-pink);
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(255, 101, 132, 0.5);
+        }
+
+        .section-sub {
+            color: #9a9ab8;
+            margin-bottom: 50px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 35px;
+            padding: 10px;
+        }
+
+        /* Crazy 3D Polaroid Cards */
+        .polaroid-3d {
+            background: #ffffff;
+            padding: 15px 15px 45px 15px;
+            border-radius: 8px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+            cursor: pointer;
+            position: relative;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        .polaroid-3d:hover {
+            transform: translateY(-15px) rotateX(8deg) rotateY(10deg) scale(1.06);
+            box-shadow: 0 30px 60px rgba(255, 42, 109, 0.5);
+            z-index: 50;
+        }
+
+        .img-wrap {
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+            background: #111;
+            border-radius: 4px;
+        }
+
+        .img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .polaroid-3d:hover img {
+            transform: scale(1.18);
+        }
+
+        .polaroid-3d p {
+            margin-top: 18px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.6rem;
+            color: #1a1a2e;
+            font-weight: bold;
+        }
+
+        /* Interactive Crazy Surprise Arena */
+        .surprise-arena {
+            padding: 80px 0 100px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .arena-card {
+            max-width: 700px;
+            width: 100%;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .arena-card h2 {
+            font-family: 'Sacramento', cursive;
+            font-size: 3.8rem;
+            color: #ff8fa3;
+            margin-bottom: 15px;
+        }
+
+        .arena-card p {
+            color: #b8b8d4;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .mega-btn {
+            background: linear-gradient(135deg, #ff2a6d, #ff6584, #ffb3c6);
+            background-size: 200% 200%;
+            color: white;
+            border: none;
+            padding: 18px 45px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 0 30px rgba(255, 42, 109, 0.6);
+            animation: gradientShift 4s infinite ease, pulseBtn 2s infinite;
+            transition: 0.3s;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes pulseBtn {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.08); box-shadow: 0 0 50px rgba(255, 42, 109, 0.9); }
+        }
+
+        .blast-box {
+            margin-top: 30px;
+            padding: 25px;
+            background: rgba(255, 42, 109, 0.12);
+            border: 2px dashed var(--primary-glow);
+            border-radius: 20px;
+            display: none;
+            animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+
+        @keyframes popIn {
+            0% { transform: scale(0.7); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .blast-box p {
+            color: #fff;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* Lightbox Modal */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 10000;
+            top: 0; left: 0;
+            width: 100vw; height: 100vh;
+            background: rgba(5, 3, 15, 0.92);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox img {
+            max-width: 88%;
+            max-height: 85vh;
+            border-radius: 12px;
+            border: 3px solid var(--primary-glow);
+            box-shadow: 0 0 50px rgba(255, 42, 109, 0.7);
+            animation: zoomModal 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        @keyframes zoomModal {
+            from { transform: scale(0.5); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .close-lb {
+            position: absolute;
+            top: 35px;
+            right: 45px;
+            color: #fff;
+            font-size: 50px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .close-lb:hover {
+            color: var(--primary-glow);
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid rgba(255, 42, 109, 0.2);
+            color: #8a8aa3;
+            font-size: 0.95rem;
+            background: rgba(5, 3, 15, 0.8);
+        }
+
+        footer strong {
+            color: var(--neon-pink);
+        }
+
+        .sub-date {
+            margin-top: 8px;
+            font-size: 0.85rem;
+            color: #555577;
+            letter-spacing: 1px;
+        }
+
+        /* Responsive Breakpoints */
+        @media(max-width: 768px) {
+            .letter-container, .arena-card {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Interactive Canvas Particles -->
+    <canvas id="magicCanvas"></canvas>
+
+    <!-- Floating Audio & Visual Controls -->
+    <div class="control-deck">
+        <div class="cyber-btn" id="musicToggle" title="Toggle Romantic Beats">
+            <i class="fa-solid fa-music"></i>
+        </div>
+        <div class="cyber-btn" id="burstToggle" title="Instant Heart Blast">
+            <i class="fa-solid fa-fire"></i>
+        </div>
+    </div>
+
+    <!-- Hidden Romantic Audio Track -->
+    <audio id="romanticAudio" loop>
+        <source src="1.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="wrapper">
+        
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="live-badge">✨ Special Birthday Masterpiece ✨</div>
+            <h1>To My Dearest Tom <span>😽</span></h1>
+            <p>Crafted with endless obsession & fierce love by Harshit</p>
+            <div class="scroll-indicator">
+                <span>Explore Our Universe</span>
+                <i class="fa-solid fa-chevron-down" style="color: var(--primary-glow); margin-top: 8px;"></i>
+            </div>
+        </header>
+
+        <!-- Romantic Letter Section -->
+        <section class="letter-section">
+            <div class="holo-card letter-container">
+                <div class="letter-header">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                    <h2>A Letter From Harshit</h2>
+                </div>
+                <div class="letter-body">
+                    <p class="greet">Happy Birthday, My love ❤️🎂</p>
+                    <p>Aaj ka din mere liye sirf aapka birthday nhi h, balki woh din h jis din meri duniya ko aap jaisi khoobsurat ladki mili. 🥹❤️</p>
+                    <p>Aap meri life ka woh hissa ho jiske bina sab kuch thoda adhura sa lgta h. Aapki smile meri favourite chij h aapki khushi meri priority h...... aur aapka saath meri sabse beautiful feeling. ❤️</p>
+                    <p>Main nahi jaanta future mein kya...kya hoga, bt ek cheez hamesha chahta hu — aap meri life ka hissa hamesha bani raho. Har birthday aapke saath celebrate kru, har khushi aapke saath share kru or har mushkil waqt mein aapka haath pakad kr aapke saath khada rhu. 🫶🏻</p>
+                    <p>Thank you meri life mein aane ke liye, mujhe samajhne ke liye, meri care karne ke liye aur meri duniya ko itna beautiful banane ke liye. ❤️</p>
+                    <p>Happy Birthday, my love! 🎂💖</p>
+                    <p>May all your dreams come true, may your smile never fade, and may I always have the privilege of being one of the reasons behind that smile. 🥰</p>
+                    <p class="signature">I love you more than words can ever explain. ❤️♾️<br><strong>— Forever Yours, Harshit</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3D Photo Gallery Section (10 Memories) -->
+        <section class="gallery-section">
+            <h2 class="section-heading">Our Core Memories 📸</h2>
+            <p class="section-sub">10 snapshots of pure magic & timeless moments...</p>
+            
+            <div class="gallery-grid">
+                <!-- 1 -->
+                <div class="polaroid-3d">
+                    <div class="img-wrap"><img src="2.png" alt="Memory 1"></div>
+                    <p>Memory #1 ✨</p>
+                </div>
+                <!-- 2 -->
+                <div class="polaroid-3d">
+                    <div class="img-wrap"><img src="1.png" alt="Memory 2"></div>
+                    <p>Your Cute Smile 😍</p>
+                </div>
+                <!-- 3 -->
+                <div class="polaroid-3d">
+                    <div class="img-wrap"><img src="3.png" alt="Memory 3"></div>
+                    <p>My Favorite Person 😽</p>
+                </div>
+                <!-- 4 -->
+                <div class="polaroid-3d">
+                    <div class="img-wrap"><img src="4.png" alt="Memory 4"></div>
+                    <p>Endless Talks 💭</p>
+                </div>
+                <!-- 5 -->
+                <div class="polaroid-3d">
+                    <div class="img-wrap"><img src="5.png" alt="Memory 5"></div>
+                    <p>Special Dates 🌹</p>
+                </div>
+                <!-- 6 -->
+                <div class="polaroid-3d">
+                    <div class="img-wrap"><img src="6.png" alt="Memory 6"></div>
+                    <p>Pure Happiness 💫</p>
+                </div>
+                <!-- 7 -->
+                <div class="polaroid-3d">
+                    <div class="img-wrap"><img src="7.png" alt="Memory 7"></div>
+                    <p>Tom 😽 & Harshit 🫶🏻</p>
+                </div>
+                <!-- 8 -->
+                <div class="polaroid-3d">
+                    <div class="img-wrap"><img src="8.png" alt="Memory 8"></div>
+                    <p>Sweetest Moments 🍬</p>
+                </div>
+                <!-- 9 -->
+                <div class="polaroid-3d">
+                    <div class="img-wrap"><img src="9.png" alt="Memory 9"></div>
+                    <p>My Safe Haven 🏡</p>
+                </div>
+                <!-- 10 -->
+                <div class="polaroid-3d">
+                    <div class="img-wrap"><img src="10.png" alt="Memory 10"></div>
+                    <p>Forever & Always ♾️</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Crazy Surprise Arena -->
+        <section class="surprise-arena">
+            <div class="holo-card arena-card">
+                <h2>Claim Your Crazy Gift! 🎁</h2>
+                <p>Tap the magic button to unleash a storm of confetti and love explosions!</p>
+                <button class="mega-btn" id="surpriseTrigger">Unleash Ultimate Hugs & Kisses 💖</button>
+                <div class="blast-box" id="blastMessage">
+                    <p>🎉 BOOM! Harshit just sent you 10,000,000 tight hugs, unlimited kisses, and endless love! Happy Birthday, my queen Tom! 👑😽✨</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>Architected with madness & devotion by <strong>Harshit</strong> for <strong>Prerna (Tom 😽)</strong></p>
+            <p class="sub-date">Celebrating her glorious existence since 11/08/2004 🎂🚀</p>
+        </footer>
+
+    </div>
+
+    <!-- Image Lightbox Modal -->
+    <div class="lightbox" id="lightboxModal">
+        <span class="close-lb" id="closeLightbox">&times;</span>
+        <img id="lightboxImg" src="" alt="Zoomed Memory">
+    </div>
+
+    <script>
+        /* =========================================
+           CRAZY INTERACTIVE ANIMATION ENGINE (JS)
+           ========================================= */
+        
+        // 1. High-Performance Particle & Firefly Background Canvas
+        const canvas = document.getElementById("magicCanvas");
+        const ctx = canvas.getContext("2d");
+
+        let width = canvas.width = window.innerWidth;
+        let height = canvas.height = window.innerHeight;
+
+        window.addEventListener("resize", () => {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        });
+
+        const particles = [];
+        const particleCount = 65;
+
+        for (let i = 0; i < particleCount; i++) {
+            particles.push({
+                x: Math.random() * width,
+                y: Math.random() * height,
+                radius: Math.random() * 3 + 1,
+                color: Math.random() > 0.5 ? '#ff2a6d' : '#05d9e8',
+                vx: (Math.random() - 0.5) * 0.8,
+                vy: (Math.random() - 0.5) * 0.8,
+                alpha: Math.random() * 0.7 + 0.3
+            });
+        }
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, width, height);
+            
+            particles.forEach(p => {
+                p.x += p.vx;
+                p.y += p.vy;
+
+                if (p.x < 0) p.x = width;
+                if (p.x > width) p.x = 0;
+                if (p.y < 0) p.y = height;
+                if (p.y > height) p.y = 0;
+
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                ctx.fillStyle = p.color;
+                ctx.shadowBlur = 12;
+                ctx.shadowColor = p.color;
+                ctx.globalAlpha = p.alpha;
+                ctx.fill();
+            });
+
+            requestAnimationFrame(animateParticles);
+        }
+        animateParticles();
+
+        // 2. Confetti Explosion Helper
+        function fireConfettiBurst() {
+            confetti({
+                particleCount: 120,
+                spread: 90,
+                origin: { y: 0.6 },
+                colors: ['#ff2a6d', '#ff6584', '#05d9e8', '#ffffff', '#ffb3c6']
+            });
+        }
+
+        // Trigger initial confetti on load after 1s
+        setTimeout(fireConfettiBurst, 1000);
+
+        //3. Audio Controller & Auto-play Handler
+const musicToggle = document.getElementById("musicToggle");
+const romanticAudio = document.getElementById("romanticAudio");
+let isMusicPlaying = false;
+
+// Attempt auto-play on page load
+window.addEventListener('DOMContentLoaded', () => {
+    romanticAudio.play().then(() => {
+        // If browser allows immediate autoplay
+        isMusicPlaying = true;
+        musicToggle.style.background = "var(--primary-glow)";
+        musicToggle.style.color = "#fff";
+        musicToggle.innerHTML = '<i class="fa-solid fa-volume-high"></i>';
+    }).catch(error => {
+        // If browser blocks autoplay, play automatically on the very first click/touch anywhere on the page
+        const unlockAudio = () => {
+            romanticAudio.play();
+            isMusicPlaying = true;
+            musicToggle.style.background = "var(--primary-glow)";
+            musicToggle.style.color = "#fff";
+            musicToggle.innerHTML = '<i class="fa-solid fa-volume-high"></i>';
+            window.removeEventListener('click', unlockAudio);
+            window.removeEventListener('touchstart', unlockAudio);
+        };
+        window.addEventListener('click', unlockAudio);
+        window.addEventListener('touchstart', unlockAudio);
+    });
+});
+
+// Manual Toggle Button
+musicToggle.addEventListener("click", () => {
+    if (!isMusicPlaying) {
+        romanticAudio.play().catch(err => console.log("Audio play error:", err));
+        musicToggle.style.background = "var(--primary-glow)";
+        musicToggle.style.color = "#fff";
+        musicToggle.innerHTML = '<i class="fa-solid fa-volume-high"></i>';
+        isMusicPlaying = true;
+    } else {
+        romanticAudio.pause();
+        musicToggle.style.background = "rgba(255, 42, 109, 0.15)";
+        musicToggle.style.color = "var(--neon-pink)";
+        musicToggle.innerHTML = '<i class="fa-solid fa-music"></i>';
+        isMusicPlaying = false;
+    }
+});
+
+        // 4. Burst Button Manual Trigger
+        document.getElementById("burstToggle").addEventListener("click", fireConfettiBurst);
+
+        // 5. Interactive Surprise Arena Button
+        const surpriseTrigger = document.getElementById("surpriseTrigger");
+        const blastMessage = document.getElementById("blastMessage");
+
+        surpriseTrigger.addEventListener("click", () => {
+            blastMessage.style.display = "block";
+            surpriseTrigger.textContent = "More Crazy Love Delivered! 🥰🚀";
+            surpriseTrigger.style.background = "linear-gradient(135deg, #05d9e8, #ff2a6d)";
+            fireConfettiBurst();
+            setTimeout(fireConfettiBurst, 400);
+        });
+
+        // 6. Lightbox Image Zoom Engine
+        const lightbox = document.getElementById("lightboxModal");
+        const lightboxImg = document.getElementById("lightboxImg");
+        const closeLightbox = document.getElementById("closeLightbox");
+        const galleryImages = document.querySelectorAll(".img-wrap img");
+
+        galleryImages.forEach(img => {
+            img.addEventListener("click", () => {
+                lightbox.style.display = "flex";
+                lightboxImg.src = img.src;
+            });
+        });
+
+        closeLightbox.addEventListener("click", () => {
+            lightbox.style.display = "none";
+        });
+
+        lightbox.addEventListener("click", (e) => {
+            if (e.target === lightbox) {
+                lightbox.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>
